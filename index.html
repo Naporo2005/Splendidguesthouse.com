@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Splendid Guest House</title>
+<meta name="description" content="Splendid Guest House is a comfortable and affordable guest house in Tamale, Ghana. Enjoy peaceful surroundings, quality rooms, excellent hospitality, secure parking, and a memorable stay in a convenient location.">
+  <title>Splendid Guest House | Guest house in Tamale Ghana.</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
@@ -1510,7 +1511,7 @@ Reception: 24 / 7
 </div>
 <div class="info">
 <strong>Address</strong>
-Behind Jambo Fuel Station, Tamale, Ghana.
+Tamale, Ghana.
 <br>
 GP Adress:NS-335-98-19.
 <br>
@@ -1627,8 +1628,8 @@ A boutique haven where elegance meets warmth. Your comfort is our calling.
 <ul>
 <li><a href="tel:+233545414948">+233 545 414 948</a></li>
 <li><a href="mailto:splendid@gmail.com">splendid@gmail.com</a></li>
-<li><a href="#contact"><strong>Address</strong>
-Behind Jambo Fuel Station, Tamale, Ghana.</a></li>
+<li><a href="#contact"><strong>Address</strong><br>
+Tamale, Ghana.</a></li>
 <li><a href="https://maps.app.goo.gl/vS98VLHTm4tKGpuV6" target="_blank"><strong>Find Us On Google Map</strong>
 </a></li>
 </ul>
@@ -1734,13 +1735,12 @@ item.style.display = show ? '': 'none';
 /* ── Contact form → WhatsApp ──
      Builds a pre-filled WhatsApp message from the form fields and
      opens wa.me with that text instead of submitting anywhere. */
-const WHATSAPP_NUMBER = '233555358325'; // digits only, country code, no leading +
+const WHATSAPP_NUMBER = '233545414948'; // digits only, country code, no leading +
 
 function handleSubmit(e) {
 e.preventDefault();
 const first = document.getElementById('firstName').value.trim();
 const last = document.getElementById('lastName').value.trim();
-const email = document.getElementById('emailAddr').value.trim();
 const phone = document.getElementById('phoneNumber').value.trim();
 const checkin = document.getElementById('checkinDate').value;
 const checkout = document.getElementById('checkoutDate').value;
@@ -1752,7 +1752,6 @@ const lines = [
 ``,
 `Name: ${first} ${last}`,
 phone ? `Phone: ${phone}`: null,
-email ? `Email: ${email}`: null,
 checkin ? `Check-in: ${checkin}`: null,
 checkout ? `Check-out: ${checkout}`: null,
 room ? `Room preference: ${room}`: null,
@@ -1781,4 +1780,4 @@ observer.observe(el);
 });
 </script>
 </body>
-</html>
+  </html>
