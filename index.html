@@ -1349,18 +1349,6 @@ this)">Videos</button>-->
 <span class="g-label">Elegant Comfort Room</span>
 </div>
 </div>
-<div class="gallery-item" data-cat="dining">
-<img src="breakfast-set.jpg" alt="Breakfast table" />
-<div class="g-overlay">
-<span class="g-label">Morning Elegance</span>
-</div>
-</div>
-<div class="gallery-item" data-cat="outdoor">
-<img src="Outdoor1.jpg" alt="Villa suite exterior" />
-<div class="g-overlay">
-<span class="g-label">Elegant Villa Suite</span>
-</div>
-</div>
 
 <div class="gallery-item" data-cat="rooms">
 <img src="standard-room.jpg" alt="Standard guest room" />
@@ -1368,19 +1356,8 @@ this)">Videos</button>-->
 <span class="g-label">Standard Guest Room</span>
 </div>
 </div>
-<div class="gallery-item wide" data-cat="outdoor">
-<img src="Outdoor2.jpg" alt="Courtyard view" />
-<div class="g-overlay">
-<span class="g-label">Exclusive Courtyard View</span>
-</div>
-</div>
 
-<div class="gallery-item" data-cat="dining">
-<img src="splendid-dining-area.jpg" alt="Dining area" />
-<div class="g-overlay">
-<span class="g-label">Stylish Dining Area</span>
-</div>
-</div>
+
 
 <!--<div class="gallery-item wide" data-cat="video">
 <video src="splendid-tour.mp4" poster="splendid-hero.jpg" muted loop playsinline preload="metadata" onmouseover="this.play()" onmouseout="this.pause()"></video>
@@ -1846,14 +1823,16 @@ item.style.display = show ? '': 'none';
 
 /* ── Contact form → WhatsApp ──
      Builds a pre-filled WhatsApp message from the form fields and
-     opens wa.me with that text instead of submitting anywhere. */
+     opens wa.me with that text instead of submitting anywhere.
+     Note: there is no email field in this form, so we no longer
+     look one up — that missing element was throwing an error and
+     silently blocking the whole submit before window.open() ran. */
 const WHATSAPP_NUMBER = '233545414948'; // digits only, country code, no leading +
 
 function handleSubmit(e) {
 e.preventDefault();
 const first = document.getElementById('firstName').value.trim();
 const last = document.getElementById('lastName').value.trim();
-const email = document.getElementById('emailAddr').value.trim();
 const phone = document.getElementById('phoneNumber').value.trim();
 const checkin = document.getElementById('checkinDate').value;
 const checkout = document.getElementById('checkoutDate').value;
@@ -1865,7 +1844,6 @@ const lines = [
 ``,
 `Name: ${first} ${last}`,
 phone ? `Phone: ${phone}`: null,
-email ? `Email: ${email}`: null,
 checkin ? `Check-in: ${checkin}`: null,
 checkout ? `Check-out: ${checkout}`: null,
 room ? `Room preference: ${room}`: null,
@@ -1894,4 +1872,4 @@ observer.observe(el);
 });
 </script>
 </body>
-  </html>
+                            </html>
